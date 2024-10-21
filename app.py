@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request, jsonify
 import numpy as np
-import pickle
+import pickle5
 import os  
 
 app = Flask(__name__)
 
-# # Muat model dari file pickle
-# model_path = os.path.join('model', 'water_usage_model.pkl')
-# with open(model_path, 'rb') as model_file:
-#     model = pickle.load(model_file)
+# Muat model dari file pickle
+model_path = os.path.join('model', 'water_usage_model.pkl')
+with open(model_path, 'rb') as model_file:
+    model = pickle.load(model_file)
 
 @app.route('/')
 def index():
